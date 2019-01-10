@@ -23,9 +23,16 @@ binary_sensor: !include binary_sensor.yaml
 sensor: !include sensor.yaml
 switch: !include switch.yaml
 
-#Configurations
+# Configurations
 zwave:
   usb_path: /dev/ttyAMA0
+
+# Side Menu Additions
+panel_iframe:
+  configurator:
+    title: Configurator
+    icon: mdi:wrench
+    url: !secret configurator_url
 
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 # http:
