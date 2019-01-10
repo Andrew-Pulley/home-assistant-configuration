@@ -1,8 +1,8 @@
 homeassistant:
   name: Home
-  latitude: !secret latitude
-  longitude: !secret longitude
-  elevation: !secret elevation
+  latitude: !secret latitude_home
+  longitude: !secret longitude_home
+  elevation: !secret elevation_home
   unit_system: imperial
   time_zone: !secret time_zone
   customize: !include customize.yaml
@@ -20,6 +20,7 @@ map:
 updater:
 
 # Include
+automation: !include automation.yaml
 binary_sensor: !include binary_sensor.yaml
 group: !include groups.yaml
 media_player: !include media_player.yaml
@@ -30,6 +31,11 @@ switch: !include switch.yaml
 # Configurations
 zwave:
   usb_path: /dev/ttyAMA0
+
+http:
+  base_url: !secret http_base_url
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
 
 ring:
   username: !secret ring_username
@@ -42,6 +48,7 @@ panel_iframe:
     title: Configurator
     icon: mdi:wrench
     url: !secret configurator_url
+
 
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 # http:
