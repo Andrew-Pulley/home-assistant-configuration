@@ -24,7 +24,8 @@ sensor: !include sensor.yaml
 switch: !include switch.yaml
 
 #Configurations
-
+zwave:
+  usb_path: /dev/ttyAMA0
 
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 # http:
