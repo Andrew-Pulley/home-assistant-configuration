@@ -15,6 +15,7 @@ conversation:
 discovery:
 history:
 logbook:
+logger:
 map:
 updater:
 
