@@ -21,12 +21,20 @@ updater:
 
 # Include
 binary_sensor: !include binary_sensor.yaml
+group: !include groups.yaml
+media_player: !include media_player.yaml
 sensor: !include sensor.yaml
 switch: !include switch.yaml
+
 
 # Configurations
 zwave:
   usb_path: /dev/ttyAMA0
+
+ring:
+  username: !secret ring_username
+  password: !secret ring_password
+
 
 # Side Menu Additions
 panel_iframe:
