@@ -42,7 +42,6 @@ sensor: !include sensor.yaml
 switch: !include switch.yaml
 
 # Enable
-introduction:
 frontend:
 config:
 conversation:
