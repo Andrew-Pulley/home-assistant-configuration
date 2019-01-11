@@ -12,6 +12,11 @@ http:
   ssl_certificate: !secret ssl_certificate
   ssl_key: !secret ssl_key
 
+rainmachine:
+  controllers:
+    - ip_address: 10.0.0.24
+      password: !secret rainmachine_password
+
 ring:
   username: !secret ring_username
   password: !secret ring_password
