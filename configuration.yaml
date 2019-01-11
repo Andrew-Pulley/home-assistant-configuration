@@ -7,30 +7,6 @@ homeassistant:
   time_zone: !secret time_zone
   customize: !include customize.yaml
 
-# Enable
-frontend:
-config:
-conversation:
-discovery:
-history:
-logbook:
-logger:
-map:
-updater:
-
-# Include
-automation: !include automation.yaml
-binary_sensor: !include binary_sensor.yaml
-group: !include groups.yaml
-media_player: !include media_player.yaml
-sensor: !include sensor.yaml
-switch: !include switch.yaml
-
-
-# Configurations
-zwave:
-  usb_path: /dev/ttyAMA0
-
 http:
   base_url: !secret http_base_url
   ssl_certificate: !secret ssl_certificate
@@ -40,24 +16,34 @@ ring:
   username: !secret ring_username
   password: !secret ring_password
 
+zwave:
+  usb_path: /dev/ttyAMA0
 
-# Side Menu Additions
+# Side Menu
 panel_iframe:
   configurator:
     title: Configurator
     icon: mdi:wrench
     url: !secret configurator_url
 
+# Include
+alexa: !include alexa.yaml
+automation: !include automation.yaml
+binary_sensor: !include binary_sensor.yaml
+group: !include group.yaml
+light: !include light.yaml
+media_player: !include media_player.yaml
+sensor: !include sensor.yaml
+switch: !include switch.yaml
 
-# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-# http:
-#   base_url: example.duckdns.org:8123
-
-# Checks for available updates
-# Note: This component will send some information about your system to
-# the developers to assist with development of Home Assistant.
-# For more information, please see:
-# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
-
-  # Optional, allows Home Assistant developers to focus on popular components.
-  # include_used_components: true
+# Enable
+introduction:
+frontend:
+config:
+conversation:
+discovery:
+history:
+logbook:
+logger:
+map:
+updater:
