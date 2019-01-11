@@ -1,0 +1,19 @@
+# Sensor Groups
+RainMachine:
+  - binary_sensor.extra_water_on_hot_days
+  - binary_sensor.freeze
+  - binary_sensor.freeze_protection
+  - binary_sensor.hourly
+  - binary_sensor.month
+  - binary_sensor.raindelay
+  - binary_sensor.rainsensor
+  - binary_sensor.weekday
+  - sensor.freeze_protect_temp
+
+AmbientWeather:
+  - sensor.tempf
+  - sensor.eventrainin
+  - sensor.feelsLike
+  - sensor.humidity
+  - sensor.windspeedmph
+  - sensor.winddir_avg2m
