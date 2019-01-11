@@ -7,3 +7,4 @@
       command_state: 'curl -s GET http://10.0.0.5:8060/query/device-info | grep power-mode | sed -e "s:<power-mode>DisplayOff</power-mode>:OFF:" -e "s:<power-mode>PowerOn</power-mode>:ON:"'
       value_template: '{{ value == "ON" }}'
       friendly_name: 'Living Room TV'
+      icon: 'mdi:television'
