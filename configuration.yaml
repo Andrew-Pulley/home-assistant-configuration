@@ -11,6 +11,14 @@ device_tracker:
   - platform: bluetooth_tracker
     interval_seconds: 15
     consider_home: 150
+    new_device_defaults:
+      track_new_devices: true
+      hide_if_away: false
+  - platform: nmap_tracker
+    hosts: 10.0.0.0/24
+    new_device_defaults:
+      track_new_devices: true
+      hide_if_away: false
 http:
   base_url: !secret http_base_url
   ssl_certificate: !secret ssl_certificate
