@@ -9,7 +9,8 @@ homeassistant:
 
 device_tracker:
   - platform: bluetooth_tracker
-
+    interval_seconds: 15
+    consider_home: 150
 http:
   base_url: !secret http_base_url
   ssl_certificate: !secret ssl_certificate
@@ -43,7 +44,7 @@ switch: !include switch.yaml
 frontend:
 config:
 conversation:
-discovery:
+# discovery:
 history:
 logbook:
 logger:
