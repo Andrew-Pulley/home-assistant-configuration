@@ -1,5 +1,4 @@
-- id: letsencrypt-renewal
-  alias: "Let's Encrypt Renewal"
+- alias: "Let's Encrypt Renewal"
   trigger:
   - platform: time
     at: '00:00:00'
@@ -18,8 +17,7 @@
 #     service: switch.turn_on
 #     entity_id: switch.outside_front_lights
 
--id: sunset-lights-on
-  alias: "Exterior lighting on when dark outside"
+- alias: "Exterior lighting on when dark outside"
   trigger:
     - platform: sun
       event: sunset
