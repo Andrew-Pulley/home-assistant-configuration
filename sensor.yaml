@@ -3,3 +3,5 @@
   app_key: !secret ambient_app_key
   monitored_conditions:
     - tempf
+
+- platform: ring
