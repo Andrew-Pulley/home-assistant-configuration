@@ -1,0 +1,5 @@
+# alexa:
+#     filter:
+#       include_entities:
+#         - switch.outside_front_lights
+#         - switch.living_room_tv
