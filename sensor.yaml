@@ -1,10 +1,3 @@
 - platform: ambient_station
   api_key: !secret ambient_api_key
   app_key: !secret ambient_app_key
-  monitored_conditions:
-    - tempf
-    - eventrainin
-    - feelsLike
-    - humidity
-    - windspeedmph
-    - winddir

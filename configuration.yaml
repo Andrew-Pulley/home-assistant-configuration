@@ -26,7 +26,9 @@ http:
   ssl_certificate: !secret ssl_certificate
   ssl_key: !secret ssl_key
 
-# nest:
+nest:
+  client_id: !secret nest_client_id
+  client_secret: !secret nest_client_secret
 
 
 ring:
@@ -58,7 +60,7 @@ switch: !include switch.yaml
 frontend:
 config:
 conversation:
-hassio:
+discovery:
 history:
 logbook:
 logger:
