@@ -7,3 +7,30 @@
   - service: hassio.addon_restart
     data:
       addon: core_letsencrypt
+
+# alias: "Exterior lighting on when home"
+# trigger:
+#   platform: state
+#   entity_id: binary_sensor.carterville_rd_away
+#   from: 'on'
+#   to: 'off'
+#   action:
+#     service: switch.turn_on
+#     entity_id: switch.outside_front_lights
+
+alias: "Exterior lighting on when dark outside"
+trigger:
+  platform: sun
+  event: sunset
+  offset: '00:30:00'
+action:
+  service: switch.turn_on
+  entity_id: switch.outside_front_lights
+
+alias: "Exterior lighting off at midnight"
+trigger:
+  platform: time
+  at: '00:00:00'
+action:
+  service: switch.turn_off
+  entity_id: switch.outside_front_lights

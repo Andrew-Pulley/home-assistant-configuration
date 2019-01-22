@@ -50,6 +50,7 @@ panel_iframe:
 alexa: !include alexa.yaml
 automation: !include automation.yaml
 binary_sensor: !include binary_sensor.yaml
+cloud: !include cloud.yaml
 group: !include group.yaml
 light: !include light.yaml
 media_player: !include media_player.yaml
@@ -57,7 +58,6 @@ sensor: !include sensor.yaml
 switch: !include switch.yaml
 
 # Enable
-cloud:
 config:
 conversation:
 discovery:
