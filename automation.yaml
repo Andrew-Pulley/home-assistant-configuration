@@ -25,12 +25,11 @@
   action:
     - service: switch.turn_on
       entity_id: switch.outside_front_lights
-#
-# -id: midnight-lights-off
-#   alias: "Exterior lighting off at midnight"
-#   trigger:
-#     platform: time
-#     at: '00:00:00'
-#   action:
-#     service: switch.turn_off
-#     entity_id: switch.outside_front_lights
+
+- alias: "Exterior lighting off at midnight"
+  trigger:
+    platform: time
+    at: '00:00:00'
+  action:
+    service: switch.turn_off
+    entity_id: switch.outside_front_lights
