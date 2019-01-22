@@ -1,8 +1,8 @@
 alexa:
-    filter:
-      include_domains:
-        - switch
-    entity_config:
+  filter:
+    include_domains:
+      - switch
+  entity_config:
     switch.outside_front_lights:
       Name: Outside Lights
     switch.living_room_tv:
