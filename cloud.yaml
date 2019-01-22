@@ -1,7 +1,7 @@
 alexa:
     filter:
       include_domains:
-        switch
+        - switch
     entity_config:
     switch.outside_front_lights:
       Name: Outside Lights
