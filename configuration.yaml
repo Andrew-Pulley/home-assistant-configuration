@@ -26,12 +26,16 @@ http:
   ssl_certificate: !secret ssl_certificate
   ssl_key: !secret ssl_key
 
+# nest:
+
+
 ring:
   username: !secret ring_username
   password: !secret ring_password
 
 zwave:
   usb_path: /dev/ttyAMA0
+  network_key: !secret network_key
 
 # Side Menu
 panel_iframe:
