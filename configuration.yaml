@@ -57,10 +57,11 @@ sensor: !include sensor.yaml
 switch: !include switch.yaml
 
 # Enable
-frontend:
+cloud:
 config:
 conversation:
 discovery:
+frontend:
 history:
 logbook:
 logger:
