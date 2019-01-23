@@ -12,27 +12,27 @@
     - platform: state
       entity_id: binary_sensor.ring_front_door_motion
       to: 'on'
-#   condition:
-#     condition: or
-#     conditions:
-#       - condition: sun
-#         after: sunset
-#       - condition: sun
-#         before: sunrise
+  condition:
+    condition: or
+    conditions:
+      - condition: sun
+        after: sunset
+      - condition: sun
+        before: sunrise
   action:
     - service: switch.turn_on
       entity_id: switch.outside_front_lights
 
-# - alias: "Exterior lights off after 5 minutes no motion"
-#   trigger:
-#     - platform: binary_sensor
-#       event: ring_front_door_motion
-#       to: 'off'
-#       for:
-#         minutes: 5
-#   action:
-#     - service: switch.turn_off
-#       entity_id: switch.outside_front_lights
+- alias: "Exterior lights off after 5 minutes no motion"
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.ring_front_door_motion
+      to: 'off'
+      for:
+        minutes: 10
+  action:
+    - service: switch.turn_off
+      entity_id: switch.outside_front_lights
 
 # - alias: "Exterior lighting on after dark"
 #   trigger:
