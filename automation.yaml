@@ -9,8 +9,8 @@
 
 - alias: "Exterior lights on with motion after dark"
   trigger:
-    - platform: binary_sensor
-      event: ring_front_door_motion
+    - platform: state
+      entity_id: binary_sensor.ring_front_door_motion
       to: 'on'
 #   condition:
 #     condition: or
